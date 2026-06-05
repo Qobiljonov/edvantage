@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f2f2f7" />
+    <title>Kutubxona — Adtage</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body data-page="library">
+    <div class="app-frame has-tabbar">
+      <header class="top-bar">
+        <div>
+          <h1>Kutubxona</h1>
+          <p class="subtitle">PDF · DOCX · PPTX</p>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <div id="dropZone" class="drop-zone animate-in">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--accent)"
+            stroke-width="1.5"
+            style="margin: 0 auto"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="17 8 12 3 7 8" />
+            <line x1="12" y1="3" x2="12" y2="15" />
+          </svg>
+          <p style="font-size: 17px; font-weight: 600; margin-top: 16px">Fayllarni yuklang</p>
+          <p style="font-size: 13px; color: var(--ink-secondary); margin-top: 8px">
+            Torting yoki tanlang · maks. 50 MB
+          </p>
+          <button type="button" class="btn btn-primary btn-sm" style="margin-top: 20px">
+            Fayl tanlash
+          </button>
+        </div>
+
+        <p class="section-eyebrow" style="margin: 24px 0 12px">Mening fayllarim</p>
+
+        <a
+          href="knowledge-engine.html"
+          class="card animate-in"
+          style="
+            animation-delay: 0.05s;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 16px;
+          "
+        >
+          <p class="card-title">Bilim dvigateli</p>
+          <p class="card-sub" style="margin-top: 4px">PDF qanday AI javobga aylanadi — 7 bosqich</p>
+          <span class="btn btn-ghost" style="margin-top: 10px; padding-left: 0"
+            >Jarayonni ko'rish →</span
+          >
+        </a>
+
+        <div class="card animate-in" style="animation-delay: 0.05s">
+          <div class="list-row">
+            <div
+              class="avatar-sm"
+              style="background: var(--accent-soft); color: var(--accent); border-radius: 12px"
+            >
+              PDF
+            </div>
+            <div class="row-body">
+              <p class="row-title">DTM Matematika qo'llanma</p>
+              <p class="row-meta">4.2 MB · 3 iyun</p>
+            </div>
+          </div>
+          <div class="list-row">
+            <div
+              class="avatar-sm"
+              style="background: rgba(48, 176, 163, 0.15); color: var(--teal); border-radius: 12px"
+            >
+              DOC
+            </div>
+            <div class="row-body">
+              <p class="row-title">Fizika darslik</p>
+              <p class="row-meta">1.8 MB · 1 iyun</p>
+            </div>
+          </div>
+          <div class="list-row">
+            <div
+              class="avatar-sm"
+              style="
+                background: rgba(255, 159, 10, 0.15);
+                color: var(--warning);
+                border-radius: 12px;
+              "
+            >
+              PPT
+            </div>
+            <div class="row-body">
+              <p class="row-title">Kimyo prezentatsiya</p>
+              <p class="row-meta">12.5 MB · 28 may</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <nav class="tab-bar" aria-label="Asosiy menyu">
+        <a href="dashboard.html" class="tab-item" data-page="dashboard"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg
+          >Bosh</a
+        >
+        <a href="ai-tutor.html" class="tab-item" data-page="ai-tutor"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path
+              d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"
+            /></svg
+          >AI</a
+        >
+        <a href="library.html" class="tab-item" data-page="library"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg
+          >Kutubxona</a
+        >
+        <a href="analytics.html" class="tab-item" data-page="analytics"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 3v18h18" />
+            <path d="M7 16l4-4 4 4 6-8" /></svg
+          >Tahlil</a
+        >
+        <a href="profile.html" class="tab-item" data-page="profile"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" /></svg
+          >Profil</a
+        >
+      </nav>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

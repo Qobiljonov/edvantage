@@ -1,0 +1,22 @@
+{
+  "package": {
+    "productName": "edtech-client",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "windows": [
+      {
+        "title": "EdTech Tutor",
+        "width": 900,
+        "height": 700
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "build": {
+      "distDir": "../dist",
+      "devPath": "http://localhost:5173"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 222 47% 7%;
+    --border: 220 16% 90%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  .prose hr {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+/* Inter Nation inspired dark learn theme */
+.learn-theme {
+  --learn-bg: #0c0c10;
+  --learn-surface: #14141a;
+  --learn-card: #1a1a22;
+  --learn-border: rgba(255, 255, 255, 0.08);
+  --learn-text: #f4f4f5;
+  --learn-muted: #71717a;
+  --learn-accent: #8b5cf6;
+  --learn-pink: #ec4899;
+  --learn-cyan: #22d3ee;
+}
+
+@layer utilities {
+  .bg-learn-bg {
+    background-color: var(--learn-bg);
+  }
+  .bg-learn-surface {
+    background-color: var(--learn-surface);
+  }
+  .bg-learn-card {
+    background-color: var(--learn-card);
+  }
+  .border-learn-border {
+    border-color: var(--learn-border);
+  }
+  .text-learn-text {
+    color: var(--learn-text);
+  }
+  .text-learn-muted {
+    color: var(--learn-muted);
+  }
+  .text-learn-accent {
+    color: var(--learn-accent);
+  }
+  .gradient-payment {
+    background: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #a855f7 100%);
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-active {
+    @apply bg-brand-500/10 text-brand-400 font-semibold shadow-sm ring-1 ring-brand-500/20;
+  }
+}

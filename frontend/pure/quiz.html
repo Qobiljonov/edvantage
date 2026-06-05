@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f2f2f7" />
+    <title>Test generatori — Adtage</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body data-page="quiz">
+    <div class="app-frame has-tabbar">
+      <header class="top-bar">
+        <a href="dashboard.html" class="top-bar-back" aria-label="Orqaga"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M15 18l-6-6 6-6" /></svg
+        ></a>
+        <div style="flex: 1; text-align: center">
+          <h1>Test generatori</h1>
+          <p class="subtitle">AI bilan</p>
+        </div>
+        <div style="width: 36px"></div>
+      </header>
+
+      <main class="page-content">
+        <div class="card card-lg">
+          <p class="card-title">Parametrlar</p>
+          <p class="section-eyebrow" style="margin: 16px 0 8px">Test turi</p>
+          <div class="chips chip-group" style="padding: 0">
+            <button type="button" class="chip active">DTM</button>
+            <button type="button" class="chip">Maktab</button>
+            <button type="button" class="chip">Fan</button>
+          </div>
+          <p class="section-eyebrow" style="margin: 16px 0 8px">Fan</p>
+          <div class="chips chip-group" style="padding: 0">
+            <button type="button" class="chip active">Matematika</button>
+            <button type="button" class="chip">Fizika</button>
+            <button type="button" class="chip">Kimyo</button>
+          </div>
+          <p class="section-eyebrow" style="margin: 16px 0 8px">Murakkablik</p>
+          <div class="chips chip-group" style="padding: 0">
+            <button type="button" class="chip">Oson</button>
+            <button type="button" class="chip active">O'rta</button>
+            <button type="button" class="chip">DTM</button>
+          </div>
+          <p class="section-eyebrow" style="margin: 16px 0 8px">Savollar: 30</p>
+          <input
+            type="range"
+            min="10"
+            max="90"
+            value="30"
+            style="width: 100%; accent-color: var(--accent)"
+            aria-label="Savollar soni"
+          />
+          <button
+            type="button"
+            id="generateBtn"
+            class="btn btn-primary btn-block"
+            style="margin-top: 24px"
+          >
+            Test yaratish
+          </button>
+        </div>
+
+        <div
+          id="quizLoading"
+          class="card"
+          style="margin-top: 16px; text-align: center; padding: 40px"
+          hidden
+        >
+          <div
+            style="
+              width: 40px;
+              height: 40px;
+              border: 3px solid var(--bg-secondary);
+              border-top-color: var(--accent);
+              border-radius: 50%;
+              margin: 0 auto;
+              animation: spin 0.8s linear infinite;
+            "
+          ></div>
+          <p style="margin-top: 16px; font-size: 14px; color: var(--ink-secondary)">
+            AI savollar yaratmoqda...
+          </p>
+        </div>
+        <style>
+          @keyframes spin {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        </style>
+
+        <div id="quizResult" class="card card-lg animate-in" style="margin-top: 16px" hidden>
+          <span class="badge badge-green">Tayyor · 30 savol</span>
+          <p class="card-title" style="margin-top: 12px">Matematika — DTM</p>
+          <div class="card" style="margin-top: 12px; background: var(--bg)">
+            <p style="font-size: 14px; font-weight: 600">Savol 1</p>
+            <p style="font-size: 13px; color: var(--ink-secondary); margin-top: 4px">
+              Ifodaning qiymatini toping...
+            </p>
+          </div>
+          <a href="exam.html" class="btn btn-primary btn-block" style="margin-top: 16px"
+            >Testni boshlash</a
+          >
+        </div>
+      </main>
+
+      <nav class="tab-bar" aria-label="Asosiy menyu">
+        <a href="dashboard.html" class="tab-item" data-page="dashboard"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg
+          >Bosh</a
+        >
+        <a href="ai-tutor.html" class="tab-item" data-page="ai-tutor"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path
+              d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"
+            /></svg
+          >AI</a
+        >
+        <a href="library.html" class="tab-item" data-page="library"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg
+          >Kutubxona</a
+        >
+        <a href="analytics.html" class="tab-item" data-page="analytics"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 3v18h18" />
+            <path d="M7 16l4-4 4 4 6-8" /></svg
+          >Tahlil</a
+        >
+        <a href="profile.html" class="tab-item" data-page="profile"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" /></svg
+          >Profil</a
+        >
+      </nav>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>
